@@ -1,13 +1,32 @@
 package com.eduardo.myapi;
 
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class MyapiApplication {
+import com.eduardo.myapi.domain.Usuario;
+import com.eduardo.myapi.repositories.UsuarioRepository;
 
+@SpringBootApplication
+public class MyapiApplication implements CommandLineRunner {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MyapiApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		Usuario u1 = new Usuario(null, "Eduardo Tadeu", "eduardo.silva", "123456");
+		Usuario u2 = new Usuario(null, "Aparecido", "ap.rodrigues", "123456");
+		
+		usuarioRepository.saveAll(Arrays.asList(u1,u2));
 	}
 
 }
