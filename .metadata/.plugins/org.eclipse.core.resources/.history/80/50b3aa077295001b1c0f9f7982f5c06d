@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.eduardo.myapi.domain.Usuario;
 import com.eduardo.myapi.repositories.UsuarioRepository;
@@ -41,7 +42,7 @@ public class UsuarioService {
 
 	public Usuario create(Usuario obj) {
 		obj.setId(null);
-
+		
 		return repository.save(obj);
 	}
 
