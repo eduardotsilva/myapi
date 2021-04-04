@@ -30,18 +30,18 @@ public class UsuarioResource {
 
 	@GetMapping
 	public ResponseEntity<java.util.List<Usuario>> findAll() {
-		java.util.List<Usuario> list = service.findAll();
+			java.util.List<Usuario> list = service.findAll();
 		return ResponseEntity.ok().body(list);
-
+		
 	}
-
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<Usuario> update(@PathVariable Integer id, @RequestBody Usuario obj) {
-
+	
+	@PutMapping(value = "/{Id}")
+	public ResponseEntity<Usuario> update(@PathVariable Integer id, @RequestBody Usuario obj){
+			
 		Usuario newObj = service.update(id, obj);
-
+		
 		return ResponseEntity.ok().body(newObj);
-
+		
 	}
 
 }

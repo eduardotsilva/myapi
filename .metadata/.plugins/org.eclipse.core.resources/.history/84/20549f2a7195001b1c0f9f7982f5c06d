@@ -35,7 +35,7 @@ public class UsuarioResource {
 
 	}
 
-	@PutMapping(value = "/{id}")
+	@PutMapping(value = "/{Id}")
 	public ResponseEntity<Usuario> update(@PathVariable Integer id, @RequestBody Usuario obj) {
 
 		Usuario newObj = service.update(id, obj);
