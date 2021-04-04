@@ -1,6 +1,5 @@
 package com.eduardo.myapi.services;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +13,13 @@ import com.eduardo.myapi.services.exceptions.ObjectNotFoundException;
 public class UsuarioService {
 
 	@Autowired
-	private UsuarioRepository repository;
+	private UsuarioRepository repositoty;
 
 	public Usuario findById(Integer id) {
 
-		Optional<Usuario> obj = repository.findById(id);
+		Optional<Usuario> obj = repositoty.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"Objeto não encontrado! Id: " + id + ", Tipo: " + Usuario.class.getName()));
-	}
-
-	public List<Usuario> findAll() {
-		
-		return repository.findAll();
 	}
 
 }
