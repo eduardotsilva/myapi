@@ -51,16 +51,16 @@ public class UsuarioResource {
 	public ResponseEntity<Usuario> create(@RequestBody Usuario obj) {
 		Usuario newObj = service.create(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
-
+		
 		return ResponseEntity.created(uri).build();
 	}
-
+	
 	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<Void> delete(@PathVariable Integer id) {
-
+	public ResponseEntity<Void> delete(@PathVariable Integer id){
+		
 		service.delete(id);
-
+		
 		return ResponseEntity.noContent().build();
 	}
-
+	
 }
