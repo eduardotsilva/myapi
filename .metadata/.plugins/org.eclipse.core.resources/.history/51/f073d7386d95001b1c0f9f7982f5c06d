@@ -1,0 +1,5 @@
+package com.eduardo.myapi.resources.exceptions;
+
+public class StandardError {
+
+}
