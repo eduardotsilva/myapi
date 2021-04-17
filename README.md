@@ -21,5 +21,4 @@
 Esse projeto foi desenvolvido durante o curso: [Spring Boot 2.x - Minha Primeira API](https://www.udemy.com/course/spring-boot-minha-primeira-api/) 
 
 
-[alt Oracle Certified Associate, Java SE 8 Programmer]
-(https://images.credly.com/size/340x340/images/a9848abf-f8bd-474d-a9b4-6086da11a916/Oracle_Associates_Badge__1_.png)
+![alt Oracle Certified Associate, Java SE 8 Programmer](https://images.credly.com/size/340x340/images/a9848abf-f8bd-474d-a9b4-6086da11a916/Oracle_Associates_Badge__1_.png)
